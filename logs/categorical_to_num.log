@@ -1,0 +1,38 @@
+2026-06-21 18:47:40,153 - INFO - Before X_train_cat Column : (120000, 5) : 
+ : Index(['Gender', 'Region', 'Rented_OwnHouse', 'Occupation', 'Education'], dtype='str')
+2026-06-21 18:47:40,153 - INFO - Before X_test_cat Column : (30000, 5) : 
+ : Index(['Gender', 'Region', 'Rented_OwnHouse', 'Occupation', 'Education'], dtype='str')
+2026-06-21 18:47:40,241 - INFO - After Nominal X_train_cat Column : (120000, 8) : 
+ : Index(['Rented_OwnHouse', 'Occupation', 'Education', 'Gender_Male',
+       'Region_East', 'Region_North', 'Region_South', 'Region_West'],
+      dtype='str')
+2026-06-21 18:47:40,242 - INFO - After Nominal X_test_cat Column : (30000, 8) : 
+ : Index(['Rented_OwnHouse', 'Occupation', 'Education', 'Gender_Male',
+       'Region_East', 'Region_North', 'Region_South', 'Region_West'],
+      dtype='str')
+2026-06-21 18:47:40,347 - INFO - After Odinal X_train_cat Column : (120000, 8) : 
+ : Index(['Gender_Male', 'Region_East', 'Region_North', 'Region_South',
+       'Region_West', 'Rented_OwnHouse_od', 'Occupation_od', 'Education_od'],
+      dtype='str')
+2026-06-21 18:47:40,347 - INFO - After Odinal X_test_cat Column : (30000, 8) : 
+ : Index(['Gender_Male', 'Region_East', 'Region_North', 'Region_South',
+       'Region_West', 'Rented_OwnHouse_od', 'Occupation_od', 'Education_od'],
+      dtype='str')
+2026-06-21 18:47:40,350 - INFO - Train NUll values : Gender_Male           0
+Region_East           0
+Region_North          0
+Region_South          0
+Region_West           0
+Rented_OwnHouse_od    0
+Occupation_od         0
+Education_od          0
+dtype: int64
+2026-06-21 18:47:40,352 - INFO - Test NUll values : Gender_Male           0
+Region_East           0
+Region_North          0
+Region_South          0
+Region_West           0
+Rented_OwnHouse_od    0
+Occupation_od         0
+Education_od          0
+dtype: int64

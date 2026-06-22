@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Powered Credit Risk Prediction System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+.header{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    opacity:0.9;
+}
+
+.form-container{
+    padding:35px;
+}
+
+.section-title{
+    margin-bottom:15px;
+    color:#1e293b;
+    font-size:20px;
+    font-weight:600;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:500;
+    color:#334155;
+}
+
+.input-group input,
+.input-group select{
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 10px rgba(37,99,235,0.2);
+}
+
+.predict-btn{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.predict-btn:hover{
+    transform:translateY(-2px);
+}
+
+.result{
+    margin-top:25px;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    background:#dcfce7;
+    color:#15803d;
+}
+
+@media(max-width:768px){
+    .header h1{
+        font-size:26px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🏦 AI-Powered Credit Risk Prediction System</h1>
+        <p>Predict customer loan repayment risk using Machine Learning</p>
+    </div>
+
+    <div class="form-container">
+
+        <form method="POST">
+
+            <h3 class="section-title">Customer Financial Details</h3>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Credit Utilization</label>
+                    <input type="number" step="any" name="RevolvingUtilizationOfUnsecuredLines_trim" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Age</label>
+                    <input type="number" step="any" name="Age" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Monthly Income</label>
+                    <input type="number" step="any" name="MonthlyIncome_replaced" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Dependents</label>
+                    <input type="number" step="any" name="NumberOfDependents_replaced_trim" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Open Credit Lines</label>
+                    <input type="number" step="any" name="NumberOfOpenCreditLinesAndLoans" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Real Estate Loans</label>
+                    <input type="number" step="any" name="NumberRealEstateLoansOrLines" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Gender</label>
+                    <select name="Gender_Male">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Region East</label>
+                    <input type="number" name="Region_East" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Region North</label>
+                    <input type="number" name="Region_North" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Region South</label>
+                    <input type="number" name="Region_South" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Region West</label>
+                    <input type="number" name="Region_West" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Housing Status</label>
+                    <input type="number" step="any" name="Rented_OwnHouse_con" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Occupation Score</label>
+                    <input type="number" step="any" name="Occupation_con" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Education Score</label>
+                    <input type="number" step="any" name="Education_con" required>
+                </div>
+
+            </div>
+
+            <button class="predict-btn" type="submit">
+                Predict
+            </button>
+
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            Prediction Result : {{ prediction }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

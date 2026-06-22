@@ -1,0 +1,26 @@
+2026-06-21 18:47:40,683 - INFO - Training data independent size : (223860, 14)
+2026-06-21 18:47:40,683 - INFO - Training data dependent size : (223860,)
+2026-06-21 18:47:40,683 - INFO - Testing data independent size : (30000, 14)
+2026-06-21 18:47:40,683 - INFO - Testing data dependent size : (30000,)
+2026-06-21 18:47:40,699 - INFO - Before scaling :    RevolvingUtilizationOfUnsecuredLines_trim   age_trim  NumberOfOpenCreditLinesAndLoans_trim  ...  Rented_OwnHouse_od  Occupation_od  Education_od
+0                                    0.23714  14.359943                                2.1924  ...                 0.0            4.0           0.0
+
+[1 rows x 14 columns]
+2026-06-21 18:47:40,775 - INFO - After scaling : [ 0.15853086 -0.78514008 -0.77386486 -1.14372711 -0.93356299 -0.93963548
+ -1.33889131 -0.35041906 -0.58130461 -0.4460207   1.47146158 -0.90787926
+  0.98633705 -1.38389407]
+2026-06-21 18:48:16,490 - INFO - Best Hyperparameters: {'solver': 'saga', 'penalty': 'elasticnet', 'max_iter': 500, 'C': np.float64(0.001)}
+2026-06-21 18:48:16,494 - INFO - Test Accuracy : 0.7744
+2026-06-21 18:48:16,501 - INFO - Test Confusion Matrix : 
+[[ 1568   388]
+ [ 6380 21664]]
+2026-06-21 18:48:16,515 - INFO - Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.20      0.80      0.32      1956
+           1       0.98      0.77      0.86     28044
+
+    accuracy                           0.77     30000
+   macro avg       0.59      0.79      0.59     30000
+weighted avg       0.93      0.77      0.83     30000
+

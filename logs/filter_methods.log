@@ -1,0 +1,50 @@
+2026-06-21 18:47:40,096 - INFO - Before Train COlumns : (120000, 11) 
+ : Index(['NPA Status_trim', 'RevolvingUtilizationOfUnsecuredLines_trim',
+       'age_trim', 'NumberOfTime30-59DaysPastDueNotWorse_trim',
+       'DebtRatio_trim', 'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberOfTimes90DaysLate_trim', 'NumberRealEstateLoansOrLines_trim',
+       'NumberOfTime60-89DaysPastDueNotWorse_trim',
+       'MonthlyIncome_replaced_trim', 'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,097 - INFO - Before Test COlumns : (30000, 11) 
+ : Index(['NPA Status_trim', 'RevolvingUtilizationOfUnsecuredLines_trim',
+       'age_trim', 'NumberOfTime30-59DaysPastDueNotWorse_trim',
+       'DebtRatio_trim', 'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberOfTimes90DaysLate_trim', 'NumberRealEstateLoansOrLines_trim',
+       'NumberOfTime60-89DaysPastDueNotWorse_trim',
+       'MonthlyIncome_replaced_trim', 'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,121 - INFO - Number of Good Columns : 7 : Index(['RevolvingUtilizationOfUnsecuredLines_trim', 'age_trim',
+       'DebtRatio_trim', 'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberRealEstateLoansOrLines_trim', 'MonthlyIncome_replaced_trim',
+       'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,121 - INFO - Number of Bad Columns : 4 : Index(['NPA Status_trim', 'NumberOfTime30-59DaysPastDueNotWorse_trim',
+       'NumberOfTimes90DaysLate_trim',
+       'NumberOfTime60-89DaysPastDueNotWorse_trim'],
+      dtype='str')
+2026-06-21 18:47:40,122 - INFO - After Train COlumns : (120000, 7) 
+ : Index(['RevolvingUtilizationOfUnsecuredLines_trim', 'age_trim',
+       'DebtRatio_trim', 'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberRealEstateLoansOrLines_trim', 'MonthlyIncome_replaced_trim',
+       'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,122 - INFO - After Test COlumns : (30000, 7) 
+ : Index(['RevolvingUtilizationOfUnsecuredLines_trim', 'age_trim',
+       'DebtRatio_trim', 'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberRealEstateLoansOrLines_trim', 'MonthlyIncome_replaced_trim',
+       'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,122 - INFO - ====================Hypothesis Testing=================================
+2026-06-21 18:47:40,150 - INFO - After Train COlumns : (120000, 6) 
+ : Index(['RevolvingUtilizationOfUnsecuredLines_trim', 'age_trim',
+       'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberRealEstateLoansOrLines_trim', 'MonthlyIncome_replaced_trim',
+       'NumberOfDependents_replaced_trim'],
+      dtype='str')
+2026-06-21 18:47:40,151 - INFO - After Test COlumns : (30000, 6) 
+ : Index(['RevolvingUtilizationOfUnsecuredLines_trim', 'age_trim',
+       'NumberOfOpenCreditLinesAndLoans_trim',
+       'NumberRealEstateLoansOrLines_trim', 'MonthlyIncome_replaced_trim',
+       'NumberOfDependents_replaced_trim'],
+      dtype='str')
